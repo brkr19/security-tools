@@ -28,3 +28,6 @@ logger "$PREFIX about to install Kali"
 apt-get -qyf -o Dpkg::Options::="--force-confnew" install kali-linux-full 
 
 logger "$PREFIX done installing Kali"
+
+apt-get remove --purge libgnutls-deb0-28
+logger "$PREFIX done fixing gnutls issue"
